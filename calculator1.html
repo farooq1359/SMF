@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        table
+          {
+              background-color:black;
+              border-radius: 20px;
+          }
+
+
+
+     table tr td{ 
+     width: 60px;
+     height: 60px;
+     font-si<ze:50px ;
+     text-align: center;
+     border-radius: 10px;
+     background-color:gray;
+     
+     }
+     table tr td button{
+         height:60x ;
+         width:70px ;
+        font-size:65px;
+        border-radius: 10px;
+        
+     }
+     table tr td input{
+         width:300px;
+         height: 75px;
+         direction: rtl;
+         font-size:60px;
+         border-radius: 10px;
+     }
+    </style>
+</head>
+<body>
+    <script>
+       function writeindisplay(number){
+           document.getElementById('display').value =number;
+           document.getElementById('input').value +=number;
+       }
+
+       function doOperation(op) {
+                document.getElementById('input').value += op;
+                document.getElementById('display').value = ' ';
+            }
+            function calculate(){
+            var output = eval(document.getElementById('input').value );
+            document.getElementById('display').value = output;
+            document.getElementById('input').value = output;
+            }
+
+
+
+    </script>
+
+<table border="1" >
+   <tr>
+       <td colspan="4"><input type="text" id="input" value=""> </td>
+
+
+   </tr>
+<tr>
+  <td colspan="4"><input type="text" id="display" value=""> </td>
+
+
+</tr>
+
+<tr>
+  <td><button onclick="writeindisplay(1)">1</button></td>
+  <td><button onclick="writeindisplay(2)">2</button></td>
+  <td><button onclick="writeindisplay(3)">3</button></td>
+  <td><button onclick="doOperation('+')">+</button></td>
+</tr>
+<tr>
+    <td><button onclick="writeindisplay(4)">4</button></td>
+    <td><button onclick="writeindisplay(5)">5</button></td>
+    <td><button onclick="writeindisplay(6)">6</button></td>
+    <td><button onclick="doOperation('-')">-</button></td>
+
+</tr>
+   
+
+<tr>
+    <td><button onclick="writeindisplay(7)">7</button></td>
+    <td><button onclick="writeindisplay(8)">8</button></td>
+    <td><button onclick="writeindisplay(9)">9</button></td>
+     <td><button onclick="doOperation('/')">/</button></td>
+</tr>
+
+
+<tr>
+<td><button onclick="writeindisplay(0)">0</button></td>
+<td><button onclick="doOperation('*')">*</button></td>
+<td><button onclick="doOperation('%')">%</button></td>
+<td><button onclick="calculate('=')">=</button></td>
+</tr>
+
+
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+</body>
+</html>

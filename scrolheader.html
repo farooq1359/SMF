@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #row2
+    {
+        background-color: darkcyan;
+        height: 8000px;
+        position: relative;
+        
+    }
+  #row1
+  {
+      background-color: rgb(231, 19, 19);
+      height: 200px;
+      position: fixed;
+      margin: 0px;
+      z-index: 500;
+  }
+
+
+    </style>
+    <script>
+        function scroller()
+        {
+            var y = window.scrollY;
+            // var row1=document.getElementById('row1');
+            // row1.style.display='none';
+            if 
+            (y > 200)
+            {
+              console.log(y);
+            }
+            
+        }
+     
+    
+     
+     
+     </script>
+</head>
+
+<body onscroll="scroller()">
+<div>
+  <div id="row1">
+
+
+</div>
+
+<div id="row2"> 
+
+</div>
+
+</div>
+</body>
+</html>

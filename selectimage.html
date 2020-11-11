@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+.thumb
+{
+    height:150px ;
+    width: 200px;
+ 
+}
+
+
+#preview
+{
+   height: 400px;
+}
+
+.row2
+{
+    display: flex;
+}
+
+
+</style>
+
+
+
+
+</head>
+<body>
+    <script>
+        function showpreview(img)
+        {
+            document.getElementById('preview').src=img.src
+        }
+
+
+    </script>
+    <section class="main">
+        <div class="center box">
+            <div class="row">
+                <img src="" alt="" id="preview">
+
+
+            </div>
+
+
+              <div class="row2">
+                <ul>
+                   <li><img src="images/car1.jpg" onclick="showpreview(this)" class="thumb" alt=""></li>
+                   <li><img src="images/car2.jpg" onclick="showpreview(this)" class="thumb" alt=""></li>
+                   <li><img src="images/car3.jpg" onclick="showpreview(this)"   class="thumb" alt=""></li>
+                   <li><img src="images/car4.jpg" onclick="showpreview(this)" class="thumb" alt=""></li>
+
+                </ul>
+
+               </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </section>
+    
+</body>
+</html>

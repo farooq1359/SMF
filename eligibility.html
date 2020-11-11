@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   #vote
+   {
+       height: 50px;
+       width: 250px;
+       background-color: lightcyan;
+       border:1px solid black ;
+       margin-top: 40px;
+       font-size: 20px ;
+       border-radius: 5px;
+   }
+    </style>
+</head>
+<body>
+   <script>
+     function myfunction()
+     {
+         var x=document.getElementById('age').value;
+  
+  if(x>18)
+  {
+      document.getElementById('vote').innerText="you are eiligible to cast vote.";
+  }
+   else
+   {
+     document.getElementById("vote").innerText="you are not eligible to cast vote.";
+
+   }
+
+
+
+     }
+
+   </script>
+
+
+    <section>
+       <label for="age">Age:</label>
+      <input type="text" id="age">
+      <button onclick="myfunction()">ENTER</button>
+ 
+    </section>
+     <div id="vote">
+
+
+     </div>
+
+
+</body>
+</html>

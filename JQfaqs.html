@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"> 
+
+    </script>
+
+<style>
+    .ans
+    {
+    display: none;
+    background-color: chartreuse;
+
+    }
+    .q
+    {
+        background-color: coral;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <div class="q q1">
+          Q1)  what is your name?
+        </div>
+        <div class="ans ans1">
+            Farooq
+        </div>
+        <div class="q q2">
+           Q2)  what is your father name?
+        </div>
+        <div class="ans ans2">
+            Irshad Ahmed
+        </div>
+        <div class="q q3">
+          Q3)  what is your age?
+        </div>
+        <div class="ans ans3">
+            20
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.q1').click(function () {
+                $('.ans1').slideToggle(1000)
+            });
+            $('.q2').click(function () {
+                $('.ans2').slideToggle(1000)
+            });
+            $('.q3').click(function () {
+                $('.ans3').slideToggle(1000)
+            });
+        })
+    </script>
+
+
+   
+
+    
+
+
+</body>
+</html>

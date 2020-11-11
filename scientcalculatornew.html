@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0;
+            background-color: aquamarine;
+        }
+        table
+        {
+            margin: auto;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function number(number){
+            document.getElementById('display').value += number;
+        }
+        function doOperation(op){
+            document.getElementById('display').value += op;
+        }
+        function calculate(){
+            var output = eval(document.getElementById('display').value)
+            document.getElementById('result').value = eval(document.getElementById('display').value);
+        }
+        
+        function sine(){
+            var input = document.getElementById('display').value;
+            document.getElementById('result').value = Math.sin(input);
+        }
+
+
+
+        function cose(){
+            var input = document.getElementById('display').value;
+            document.getElementById('result').value = Math.cos(input);
+        }
+
+
+        function tang(){
+            var input = document.getElementById('display').value;
+            document.getElementById('result').value = Math.tan(input);
+        }
+
+        function square(){
+            var input = document.getElementById('display').value;
+            document.getElementById('result').value = input * input;
+        }
+
+
+        function qubbed() {
+            var input = document.getElementById('display').value;
+            document.getElementById('result').value = input * input *input;
+        }
+        function clearall(){
+            document.getElementById('display').value = '';
+            document.getElementById('result').value = '';
+        }
+ 
+
+        function sqrt2() {
+            var input = document.getElementById('display').value;
+            document.getElementById('result').value =Math.sqrt(input);
+        }
+
+        function cbrt3() {
+            var input = document.getElementById('display').value;
+            document.getElementById('result').value =Math.cbrt(input);
+        }
+        function percentcal(){
+            var inp = document.getElementById('result').value;
+            document.getElementById('result').value = inp * 100;
+        }        
+
+    </script>
+    <table>
+        <tr>
+            <td colspan="5">
+                <input type="text" id="display">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input type="text" id="result">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="number(1)">
+                    1
+                </button>
+            </td>
+            <td>
+                <button onclick="number(2)">
+                    2   
+                </button>
+            </td>
+            <td>
+                <button onclick="number(3)">
+                    3
+                </button>
+            </td>
+            <td>
+                <button onclick="doOperation('+')">
+                    +
+                </button>
+            </td>
+            <td>
+                <button onclick="doOperation('-')">
+                    - 
+                </button>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <button  onclick="number(4)">
+                    4
+                </button>
+            </td>
+            <td>
+                <button  onclick="number(5)">
+                    5
+                </button>
+            </td>
+            <td>
+                <button  onclick="number(6)">
+                    6            
+                </button >
+            </td>
+
+
+            <td>
+                <button onclick="percentcal()" >
+                %
+                </button>
+            </td>
+            <td>
+                <button onclick="clearall()">
+                    C
+                </button>
+            </td>
+        </tr>
+         <tr>
+            <td>
+                <button onclick="number(7)">
+                    7
+                </button>
+            </td>
+            <td>
+                <button onclick="number(8)">
+                    8
+                </button>
+            </td>
+            <td>
+                <button onclick="number(9)">
+                    9
+                </button>
+            </td>
+
+
+            <td>
+                <button onclick="doOperation('*')">
+                    *    
+                </button>
+            </td>
+            <td>
+                <button onclick="calculate('')">
+                    =
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="sine()">
+                    sin
+                </button>
+            </td>
+            <td>
+                <button onclick="cose()">
+                    cos 
+                </button>
+            </td>
+            <td>
+                <button  onclick="tang()">
+                    tan
+                </button>
+            </td>
+            <td>
+                <button  onclick="doOperation('/')">
+                    /
+                </button>
+            </td>
+            <td>
+                <button onclick="square()">
+                    x2
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="qubbed()">
+                      x<sup>3
+                </button>
+            </td>
+            <td>
+                <button  onclick="sqrt2()">
+                    &radic;
+                </button>
+            </td>
+            <td>
+                <button  onclick="cbrt3()">
+                  &#8731;
+                </button>
+            </td>
+        <td>
+            <button onclick="number(0)">
+            0
+            </button>
+        </td>
+
+        <td>
+            <button onclick="number('00')">
+            00
+            </button>
+        </td>
+                
+    </table>
+</body>
+</html>

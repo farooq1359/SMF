@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #boss
+        {
+            background-color: aquamarine;
+            border-color: blue;
+        }
+        
+        .great
+        {
+            background-color: chartreuse;
+        }
+            </style>
+</head>
+<body>
+<table border="1"  class=great>
+ <tbody id="boss">
+
+ </tbody>
+
+
+</table>
+    
+    <script>
+        var mobile=[{name:"huawei P30 pro",price:"157,000" ,ram:"8 GB "  , storage:"256GB"    ,camera:"8MP" ,   color:"Aurora"   },
+         {name:"huawei  Nova 8", price:"68,999" ,ram:"8 GB"   , storage:" 108GB "   ,camera:"8MP" ,   color:"metallic black"  },
+         {name:" huawei Y6p" , price:"20,999",ram:"4 GB"   , storage:"64GB "   ,camera:"4MP"  ,  color:"purple"  },
+         {name:"huawei Y9A" ,price:"43,999" ,ram:"4 GB "  , storage:"64GB"    ,camera:"8MP"   , color:"white"  },
+         {name:"huawei Y9s" ,price:"39,999" ,ram:"4 GB"   , storage:"64GB "   ,camera:"8MP"    ,color:"bluish"  },
+         {name:"huawei Y9p" ,price:"30,999 ",ram:"4 GB"   , storage:"64GB"    ,camera:"8MP"   , color:"grayish"  },
+         {name:"huawei Y6s" ,price:"18,599" ,ram:"4 GB"   , storage:"64GB"    ,camera:"8MP"  ,  color:"whitish"  },
+ 
+ 
+         ]
+
+         var row=document.querySelector("tbody");
+         for(i=0 ;i<mobile.length; i++)
+
+
+         {
+  row.innerHTML+= "<td>" +mobile[i].name +"</td>" +   "<td>" +mobile[i].price +"</td>"
++  "<td>" +mobile[i].ram +"</td>"+ "<td>" +mobile[i].storage +"</td>"+ "<td>" +mobile[i].camera
+ +"</td>"+ "<td>" +mobile[i].color ;
+}
+
+
+
+</script> 
+
+</body>
+</html>

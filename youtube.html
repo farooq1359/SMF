@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js">
+
+    </script>
+    <style>
+        .view
+        {
+            width: 350px;
+            height: 200px;
+            background-color:black;
+            margin-left: 25px;
+        }
+        .sub1
+        {
+            display: flex;
+        }
+        .sub2
+        {
+            display: flex;
+        }
+        .mainplayer
+        {
+            width: 80%;
+        }
+        .side
+        {
+            width: 20%;
+        }
+        .view-maindiv
+        {
+            width: 960px;
+            height: 480px;
+        }
+        .sidediv
+        
+            {
+            width: 250px;
+            height: 150px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    
+<!--------version 1--->
+
+<div id="scene1">
+    <div class="sub1">
+        <div>
+         <video src="videos/vid 1.mp4" class="view part-video1"> </video>
+        </div>
+        <div>
+        <video src="videos/vid 2.mp4" class=" view part-video2"></video>
+        </div>
+        <div>
+        <video src="videos/vid 3.mp4" class="view part-video3"></video>
+        </div>
+    </div>
+</div>
+
+<!-----version2------->
+
+<div id="scene2">
+   <div class="sub2">
+      <div class="mainplayer" >
+         <div>
+          <video controls autoplay src="videos/vid 1.mp4" class="view-maindiv"></video>
+         </div>
+      </div>
+      <div class="side">
+          <div>
+          <video src="videos/vid 2.mp4" class=" sidediv part1-video2"></video>
+          </div>
+          <div>
+          <video src="videos/vid 3.mp4" class=" sidediv part1-video3" ></video>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+<!-----version3------->
+
+<div id="scene3">
+    <div class="sub3">
+       <div class="mainplayer" >
+          <div>
+           <video controls autoplay src="videos/vid 2.mp4" class="view-maindiv"></video>
+          </div>
+       </div>
+       <div class="side">
+           <div>
+           <video src="videos/vid 1.mp4" class="sidediv part2-video1"></video>
+           </div>
+           <div>
+           <video src="videos/vid 3.mp4" class="sidediv part2-video3"></video>
+           </div>
+       </div>
+     </div>
+ </div>
+ 
+
+<!-----version4------->
+
+<div id="scene4">
+    <div class="sub4">
+       <div class="mainplayer" >
+          <div>
+           <video controls autoplay src="videos/vid 3.mp4" class="view-maindiv"></video>
+          </div>
+       </div>
+       <div class="side">
+           <div>
+           <video src="videos/vid 1.mp4" class="sidediv part3-video1"></video>
+           </div>
+           <div>
+           <video src="videos/vid 2.mp4" class="sidediv part3-video2"></video>
+           </div>
+       </div>
+     </div>
+ </div>
+ 
+  
+<script>
+       $(document).ready(function () {
+            $('.part-video1').click(function () {
+                $('#scene2').show()
+            });
+            $('.part-video1').click(function () {
+                $('#scene1').hide()
+            });
+            $('.part-video2').click(function () {
+                $('#scene3').show()
+            });
+            $('.part-video2').click(function () {
+                $('#scene1').hide()
+            });
+            $('.part-video3').click(function () {
+                $('#scene4').show()
+            });
+            $('.part-video3').click(function () {
+                $('#scene1').hide()
+            });
+            $('.part1-video2').click(function () {
+                $('#scene3').show()
+            });
+            $('.part1-video2').click(function () {
+                $('#scene2').hide()
+            });
+            $('.part1-video3').click(function () {
+                $('#scene3').show()
+            });
+            $('.part1-video3').click(function () {
+                $('#scene2').hide()
+            });
+            $('.part2-video3').click(function () {
+                $('#scene4').show()
+            });
+            $('.part2-video3').click(function () {
+                $('#scene3').hide()
+            });
+            $('.part2-video1').click(function () {
+                $('#scene4').show()
+            });
+            $('.part2-video1').click(function () {
+                $('#scene3').hide()
+            });
+            $('.part3-video2').click(function () {
+                $('#scene3').show()
+            });
+            $('.part3-video2').click(function () {
+                $('#scene4').hide()
+            });
+            $('.part3-video1').click(function () {
+                $('#scene2').show()
+            });
+            $('.part3-video1').click(function () {
+                $('#scene4').hide()
+            });
+        })
+
+</script>
+
+</body>
+</html>
